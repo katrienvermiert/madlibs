@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madlibs</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row bg-dark" style="height: 170px">
+            <div class="col-12 text-center text-light my-auto">
+                <h1 id="title">MAD <img src="images/cartoon.png" style="height: 80px" alt="cartoon charachter"> LIBS
+                </h1>
+                <p id="subtitle">The funnest word game around!</p>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="input-group col-6 col-md-3 mt-5">
+                <input id="adjective1" class="form-control" type="text" value="" placeholder="Enter an adjective" required>
+            </div>
+            <div class="col-6 col-md-3 mt-5">
+                <input id="adjective2" class="form-control" type="text" value="" placeholder="Enter a second adjective" required>
+            </div>
+            <div class="col-6 col-md-3 mt-4 mt-md-5">
+                <input id="plnoun" class="form-control" type="text" value="" placeholder="Enter a plural noun" required>
+            </div>
+            <div class="col-6 col-md-3 mt-4 mt-md-5">
+                <input id="nationality" class="form-control" type="text" value="" placeholder="Enter a nationality" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="input-group col-6 col-md-3 mt-4">
+                <input id="person" class="form-control" type="text" value="" placeholder="Enter a person" required>
+            </div>
+            <div class="input-group col-6 col-md-3 mt-4">
+                <input id="noun1" class="form-control" type="text" value="" placeholder="Enter a noun" required>
+            </div>
+            <div class="input-group col-6 col-md-3 mt-4">
+                <input id="noun2" class="form-control" type="text" value="" placeholder="Enter a noun" required>
+            </div>
+            <div class="input-group col-6 col-md-3 mt-4">
+                <input id="noun3" class="form-control" type="text" value="" placeholder="Enter a noun" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="input-group col-6 col-md-3 mt-4">
+                <input id="food1" class="form-control" type="text" value="" placeholder="Enter a food" required>
+            </div>
+            <div class="input-group col-6 col-md-3 mt-4">
+                <input id="food2" class="form-control" type="text" value="" placeholder="Enter a food" required>
+            </div>
+            <div class="input-group col-6 col-md-3 mt-4">
+                <input id="shape" class="form-control" type="text" value="" placeholder="Enter a shape" required>
+            </div>
+            <div class="input-group col-6 col-md-3 mt-4">
+                <input id="number" class="form-control" type="text" value="" placeholder="Enter a number" required>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-10 col-s-12">
+                <button class="btn bg-dark text-light btn-default mt-4" onclick="addWords()">Make changes</button>
+                <button class="btn bg-dark text-light btn-default mt-4" type="reset" onclick="reset()">reset</button>
+                <button class="btn bg-dark text-light btn-default mt-4" type="reset" onclick="resetText()">reset text</button>
+            </div>
+        </div>
+
+        <div class="row bg-dark mt-5">
+            <div class="col-12 col-sm-8 offset-sm-2 mt-4 text-center text-light">
+                <h2>Pizza Pizza</h2>
+                <p class="border border-light rounded" id="text">
+                    Pizza was invented by a <input id="input1" type="text" value="" placeholder="adjective"> <input id="input2"
+                        type="text" value="" placeholder="nationality"> chef named <input id="input3" type="text" value=""
+                        placeholder="person">. To make pizza, you need to take a lump of <input id="input4" type="text" value=""
+                        placeholder="noun">, and make a thin, round <input id="input5" type="text" value=""
+                        placeholder="adjective"> <input id="input6" type="text" value="" placeholder="noun">. Then you cover it
+                    with <input id="input7" type="text" value="" placeholder="adjective"> sauce, <input id="input8" type="text" value=""
+                        placeholder="adjective"> cheese, and fresh chopped <input id="input9" type="text" value=""
+                        placeholder="plural noun">. Next you have to bake it in a very hot <input id="input10"
+                        type="text" value="" placeholder="noun">. When it is done, cut it into <input id="input11" type="text" value=""
+                        placeholder="number"> <input id="input12" type="text" value="" placeholder="shape">. Some people like
+                    <input id="input13" type="text" value="" placeholder="food"> pizza the best, but my favorite is the <input
+                        id="input14" type="text" value="" placeholder="food"> pizza. If I could, I would eat pizza <input
+                        id="input15" type="text" value="" placeholder="number"> times a day!
+                </p>
+            </div>
+        </div>
+    </div>
+    <!--JQuery and bootstrap scripts-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    
+    <!--myscript-->
+    <script src="script.js"></script>
+</body>
+
+</html>

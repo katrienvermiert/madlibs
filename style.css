@@ -1,0 +1,44 @@
+body{
+    font-family: 'Indie Flower', cursive;
+}
+
+/*title*/
+#title{
+    font-size: 4em;
+}
+
+#subtitle{
+    font-size: 2em;
+}
+
+@media screen and (max-width: 455px){
+    #title{
+        font-size: 3em;
+    }
+
+    #subtitle{
+        font-size: 1.2em;
+    }
+}
+
+/*text*/
+#text{
+    line-height: 3;
+    font-size: 1.3em;
+}
+
+@media screen and (max-width: 723px){
+    #text{
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 542px){
+    #text{
+        font-size: 0.8em;
+    }
+}
+
+#input1, #input2, #input3, #input4, #input5, #input6, #input7, #input8, #input9, #input10, #input11, #input12, #input13, #input14, #input15{
+    height: 30px;
+}
